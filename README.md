@@ -1,19 +1,19 @@
 ## Welcome to my Github Page
 
 ```markdown
-Syntax highlighted code block
+@SpringBootApplication
+public class SpringBootBookManagementApplication {
 
-# Header 1
-## Header 2
-### Header 3
+    public static void main(String[] args) {
+        SpringApplication.run(SpringBootBookManagementApplication.class, args);
+        System.out.println("Server has started...");
 
-- Bulleted
-- List
+    }
 
-1. Numbered
-2. List
+    @Bean
+    public BookInjector addBook() {
+        return new BookInjector();
+    }
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+}
 ```
