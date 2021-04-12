@@ -27,22 +27,22 @@ public class BookInjector implements CommandLineRunner {
     private ReviewerRepository reviewerRepository;
 
     @Override
-    public void run(String... args)  {
-        Reviewer reviewer1=new Reviewer(null,"ramsingh");
-        Reviewer reviewer2=new Reviewer(null,"rahul");
-        Reviewer reviewer3=new Reviewer(null,"vishnu");
+    public void run(String... args) {
+        Reviewer reviewer1 = new Reviewer(null, "ramsingh");
+        Reviewer reviewer2 = new Reviewer(null, "rahul");
+        Reviewer reviewer3 = new Reviewer(null, "vishnu");
         reviewerRepository.save(reviewer1);
         reviewerRepository.save(reviewer2);
         reviewerRepository.save(reviewer3);
 
 
-        Publisher publisher=new Publisher(null,"MC. Graw. Hill.");
+        Publisher publisher = new Publisher(null, "MC. Graw. Hill.");
         publisherRepository.save(publisher);
 
-        Author author=new Author(null,"Vikas Choudhary");
+        Author author = new Author(null, "Vikas Choudhary");
         authorRepository.save(author);
 
-        Book book1=new Book(null,
+        Book book1 = new Book(null,
                 "My first book on spring boot",
                 authorRepository.findAll().get(0),
                 publisherRepository.findAll().get(0),
